@@ -4,7 +4,7 @@ function Cardbody() {
   const { data } = useContext(Mycontext);
   return (
     <>
-      <h1 id="section1" className="text-center text-3xl pt-10 font-bold">Popular Movie</h1>
+      <h1 id="section1" className="text-center text-3xl pt-10 font-bold font-sans">Popular Movie</h1>
       <div className="grid gap-2 grid-cols-2 lg:grid-cols-6 md:grid-cols-4 max-w-[900px] mx-auto pt-10 pb-10">
         {data.map((items) => (
           <>
