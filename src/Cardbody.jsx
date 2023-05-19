@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { Mycontext } from "./context/AppContext";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 function Cardbody() {
   const { data } = useContext(Mycontext);
   return (
@@ -9,10 +11,11 @@ function Cardbody() {
         {data.map((items) => (
           <>
             <div className="pt-2 pb-2" key={items.id}>
-              <img
+              <LazyLoadImage
                 className="object-cover rounded-xl max-w-[90%] mx-auto "
                 src={`https://image.tmdb.org/t/p/original/${items.poster_path}`}
                 alt=""
+                effect="blur"
               />
 
               <h1 className="text-center font-bold">{items.original_title}</h1>
