@@ -5,7 +5,8 @@ function PaginationButton() {
   const { page, setPage, totalPage } = useContext(Mycontext);
 
   return (
-    <>
+      <>
+          
       <div className="flex justify-center flex-col w-fit items-center mx-auto">
         <div className="flex">
           {page > 1 && (

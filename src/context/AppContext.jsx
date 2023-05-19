@@ -6,6 +6,8 @@ export const Mycontext = createContext()
 export const MycontextProvider = ({children}) => {
 
     const [data, setData] = useState([]);
+    const [filter, setFilter] = useState([]);
+    const [activeGenere, setActivegenere] = useState(0);
     const [page, setPage] = useState(1);
     const [totalPage, setTotalPage] = useState(null);
     const [loading, setLoading] = useState(false);
@@ -18,6 +20,7 @@ export const MycontextProvider = ({children}) => {
         const movie = await res.json();
         setTotalPage(movie.total_pages);
         setData(movie.results);
+        setFilter(movie.results)
         setLoading(false)
       };
     
@@ -34,7 +37,11 @@ export const MycontextProvider = ({children}) => {
         setTotalPage,
         fecthfunc,
         setLoading,
-        loading
+        loading,
+        filter,
+        setFilter,
+        activeGenere,
+        setActivegenere
     }
     return (
         <Mycontext.Provider value={value}>
