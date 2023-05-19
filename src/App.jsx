@@ -4,7 +4,9 @@ function App() {
   return (
     <>
       <MycontextProvider>
-        <Pagination />
+        <div className="bg-blue-950 text-white">
+          <Pagination />
+          </div>
       </MycontextProvider>
     </>
   );
