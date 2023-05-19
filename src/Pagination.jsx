@@ -13,7 +13,7 @@ function Pagination() {
   return (
     <>
 
-      <Suspense fallback={<h1>Loading.....</h1>}>
+      <Suspense fallback={<div className="h-[100vh] flex justify-center items-center text-2xl font-bold"><h1>Loading.....</h1></div>}>
         <Cardbody />
         <PaginationButton />
       </Suspense>
